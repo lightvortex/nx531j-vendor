@@ -169,17 +169,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "qcrilmsgtunnel",
-	owner: "nubia",
-	apk: "proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-}
-
-android_app_import {
 	name: "PowerOffAlarm",
 	owner: "nubia",
 	apk: "proprietary/vendor/app/PowerOffAlarm/PowerOffAlarm.apk",
