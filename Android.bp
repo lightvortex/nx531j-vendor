@@ -106,9 +106,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "CNEService",
+	name: "SmartcardService",
 	owner: "nubia",
-	apk: "proprietary/priv-app/CNEService/CNEService.apk",
+	apk: "proprietary/priv-app/SmartcardService/SmartcardService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -117,9 +117,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SmartcardService",
+	name: "WfdService",
 	owner: "nubia",
-	apk: "proprietary/priv-app/SmartcardService/SmartcardService.apk",
+	apk: "proprietary/priv-app/WfdService/WfdService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -139,9 +139,20 @@ android_app_import {
 }
 
 android_app_import {
-	name: "PowerOffAlarm",
+	name: "CneApp",
 	owner: "nubia",
-	apk: "proprietary/vendor/app/PowerOffAlarm/PowerOffAlarm.apk",
+	apk: "proprietary/vendor/app/CneApp/CneApp.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "IWlanService",
+	owner: "nubia",
+	apk: "proprietary/vendor/app/IWlanService/IWlanService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -153,11 +164,22 @@ android_app_import {
 	name: "TimeService",
 	owner: "nubia",
 	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
-	certificate: "platform",
+	certificate: ":timeservice_app_cert-legacy-um",
 	dex_preopt: {
 		enabled: false,
 	},
 	soc_specific: true,
+}
+
+android_app_import {
+	name: "PowerOffAlarm",
+	owner: "nubia",
+	apk: "proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
 }
 
 android_app_import {
@@ -170,5 +192,11 @@ android_app_import {
 	},
 	privileged: true,
 	product_specific: true,
+}
+
+dex_import {
+	name: "WfdCommon",
+	owner: "nubia",
+	jars: ["proprietary/framework/WfdCommon.jar"],
 }
 
